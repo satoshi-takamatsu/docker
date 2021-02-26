@@ -1,6 +1,6 @@
 require 'webrick'
 
-server = WEBrick::HTTPSever.new(
+server = WEBrick::HTTPServer.new(
   DocumentRoot: './',
   BindAddres: '0.0.0.0',
   Port: 8000
