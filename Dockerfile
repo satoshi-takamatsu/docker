@@ -4,4 +4,7 @@ WORKDIR /var/www
 
 COPY ./src /var/www
 
-CMD ["/bin/bash"]
+RUN bundle config --local set path 'vendor/bundle'
+RUN bundle install
+
+CMD ["bundle", "exec", "ruby", "app.rb"]
